@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login GYM</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #74ebd5, #acb6e5);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        background: #ffffff;
+        border-radius: 1rem;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        max-width: 900px;
+        width: 100%;
+      }
+
+      .image {
+        flex: 1;
+        background: url("./asset/LoginImages.jpg") no-repeat center center/cover;
+        min-height: 390px;
+      }
+
+      .form-container {
+        flex: 1;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .form-container h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: #333;
+      }
+
+      .form-container form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-container input[type="text"],
+      .form-container input[type="password"] {
+        padding: 0.75rem;
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        width: 94%;
+      }
+
+      #errorMessage {
+        color: red;
+        font-style: italic;
+        margin-top: 1rem;
+      }
+
+      .form-container input[type="text"]:focus,
+      .form-container input[type="password"]:focus {
+        border-color: #74ebd5;
+        outline: none;
+      }
+
+      .form-container button {
+        background: linear-gradient(135deg, #74ebd5, #acb6e5);
+        border: none;
+        color: #ffffff;
+        padding: 0.75rem;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .form-container button:hover {
+        background: linear-gradient(135deg, #5fc9b2, #8aa8c9);
+      }
+
+      .form-container p {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+      }
+
+      .form-container a {
+        color: #74ebd5;
+        text-decoration: none;
+      }
+
+      .form-container a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          flex-direction: column;
+          margin: 10px;
+        }
+
+        .image {
+          min-height: 280px;
+          margin-top: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="image"></div>
+      <div class="form-container">
+        <h2>Login</h2>
+        <form>
+          <input type="text" placeholder="Username" />
+          <input type="password" placeholder="Password" />
+          <button type="submit">Log In</button>
+        </form>
+        <p id="errorMessage"></p>
+      </div>
+    </div>
+
+    <script>
+      document
+        .querySelector("form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const username = "admin";
+          const password = "admin123";
+
+          const usernameInput =
+            document.querySelector('input[type="text"]').value;
+          const passwordInput = document.querySelector(
+            'input[type="password"]'
+          ).value;
+
+          if (usernameInput === "" || passwordInput === "") {
+            document.getElementById("errorMessage").textContent =
+              "Please fill in all fields.";
+            return;
+          }
+
+          if (usernameInput !== username || passwordInput !== password) {
+            document.getElementById("errorMessage").textContent =
+              "Invalid username or password.";
+            return;
+          }
+          
+          window.location.href = "dashboard.html";
+        });
+    </script>
+  </body>
+</html>

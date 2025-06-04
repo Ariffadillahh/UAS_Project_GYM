@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Membership</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9fafb;
+      padding: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    table th {
+      background-color: #f4f4f4;
+      text-align: left;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Dashboard Membership</h1>
+    <div id="membership-data">
+      <!-- Data akan dimuat di sini -->
+    </div>
+  </div>
+  <script>
+    function loadMembershipData() {
+      const membershipDataDiv = document.getElementById("membership-data");
+      membershipDataDiv.innerHTML = ""; 
+
+      for (let key in localStorage) {
+        if (key.startsWith("membership_")) {
+          const className = key.replace("membership_", "");
+          const data = JSON.parse(localStorage.getItem(key));
+
+          if (data && Array.isArray(data)) {
+            const table = document.createElement("table");
+            const headerRow = `
+              <tr>
+                <th>Nama Pembeli</th>
+                <th>Total Bayar</th>
+                <th>Lama Membership</th>
+                <th>Membership Mulai</th>
+                <th>Membership Selesai</th>
+              </tr>`;
+            table.innerHTML = `<caption>Kelas ${className}</caption>` + headerRow;
+
+            data.forEach((entry) => {
+              const row = `
+                <tr>
+                  <td>${entry.namaPembeli}</td>
+                  <td>Rp${entry.totalBayar.toLocaleString()}</td>
+                  <td>${entry.lamaMembership}</td>
+                  <td>${entry.membershipMulai}</td>
+                  <td>${entry.membershipSelesai}</td>
+                </tr>`;
+              table.innerHTML += row;
+            });
+
+            membershipDataDiv.appendChild(table);
+          }
+        }
+      }
+    }
+
+    window.onload = loadMembershipData;
+  </script>
+</body>
+</html>
