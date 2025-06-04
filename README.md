@@ -21,8 +21,8 @@ Proyek ini merupakan tugas Ujian Akhir Semester (UAS) untuk mata kuliah Pemrogra
 1. **Clone Repository**
 
    ```bash
-   git clone https://github.com/username/project-uas-pemrograman-dasar.git
-   cd project-uas-pemrograman-dasar
+   https://github.com/Ariffadillahh/UAS_Project_GYM.git
+   cd UAS_Project_GYM
    ```
 
 2. **Buka di Editor/IDE**
@@ -46,8 +46,7 @@ Proyek ini tidak memiliki lisensi resmi dan hanya digunakan untuk kepentingan ak
 Jika Anda memiliki pertanyaan atau masukan mengenai proyek ini, silakan hubungi:
 
 * Nama: Arif Fadillah Wicaksono
-* Email: [email@example.com](mailto:email@example.com)
-* Github: [github.com/username](https://github.com/username)
+
 
 ---
 
