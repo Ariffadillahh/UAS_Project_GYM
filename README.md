@@ -1,4 +1,4 @@
-# UAS Pemrograman Dasar - Semester 3
+# UAS Web Pemrograman Dasar - Semester 2
 
 ## Deskripsi Proyek
 
