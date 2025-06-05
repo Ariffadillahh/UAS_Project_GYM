@@ -9,12 +9,12 @@
   <body>
     <!-- Navbar -->
     <nav
-      class="bg-white/20 backdrop-blur fixed w-full z-20 top-0 start-0 border-b border-gray-200"
+      class="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200"
     >
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
       >
-        <h1 class="text-2xl font-semibold">Rio GYM</h1>
+        <h1 class="text-2xl font-semibold italic">Rio GYM</h1>
         <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <a
             href="login.html"
@@ -84,51 +84,231 @@
         </div>
       </div>
     </nav>
-    <div id="mobailNav" class="fixed bg-white/80 backdrop-blur top-[80px] duration-300 right-[-500px] p-5 rounded-md drop-shadow-md z-10">
-      <ul class="flex flex-col space-y-2 ">
-        <li class="border-b border-gray-200 pb-2"><a href="index.html" class="hover:text-blue-500">Home</a></li>
-        <li class="border-b border-gray-200 pb-2"><a href="membership.html" class="hover:text-blue-500">Membership</a></li>
-        <li class="border-b border-gray-200 pb-2"><a href="feeds.html" class="hover:text-blue-500">Feeds</a></li>
-        <li class="border-b border-gray-200 pb-2"><a href="contact.html" class="hover:text-blue-500">Contact</a></li>
+    <div
+      id="mobailNav"
+      class="fixed bg-white/80 backdrop-blur top-[80px] duration-300 right-[-500px] p-5 rounded-md drop-shadow-md z-10"
+    >
+      <ul class="flex flex-col space-y-2">
+        <li class="border-b border-gray-200 pb-2">
+          <a href="index.html" class="hover:text-blue-500">Home</a>
+        </li>
+        <li class="border-b border-gray-200 pb-2">
+          <a href="membership.html" class="hover:text-blue-500">Membership</a>
+        </li>
+        <li class="border-b border-gray-200 pb-2">
+          <a href="feeds.html" class="hover:text-blue-500">Feeds</a>
+        </li>
+        <li class="border-b border-gray-200 pb-2">
+          <a href="contact.html" class="hover:text-blue-500">Contact</a>
+        </li>
       </ul>
     </div>
 
+    <!-- Hero Section -->
+    <div
+      class="min-h-[80vh] md:min-h-[100vh] pt-10 w-full h-full flex items-center justify-center"
+      style="
+        background-image: url(./asset/backgroundImage.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      "
+    >
+      <div class="">
+        <div class="w-full max-w-screen-md text-center text-white">
+          <h1 class="mb-5 text-2xl md:text-5xl font-bold">
+            Best Fitness Center Near You
+          </h1>
+          <p class="mb-5 text-sm md:text-lg font-normal">
+            Temukan pusat kebugaran terbaik di dekat Anda dengan fasilitas
+            modern, pelatih pribadi profesional, dan kelas kelompok untuk
+            membantu Anda mencapai tujuan kebugaran Anda.
+          </p>
+          <button
+            type="button"
+            class="py-3 cursor-pointer px-6 bg-transparent border border-blue-500 rounded-lg hover:bg-blue-500 duration-300"
+          >
+            Membership Now
+          </button>
+        </div>
+      </div>
     </div>
 
-    <!-- Main Content -->
-    <h1 class="my-10">RIo GYM</h1>
+    <div class="md:mt-[100px] mt-10 mb-10 mx-auto w-full">
+      <div class="h-[4px] w-[100px] bg-blue-500 rounded mx-auto mb-5"></div>
+      <h1 class="text-2xl md:text-4xl text-center font-light">
+        Our Best Courses
+      </h1>
+      <p class="text-center text-gray-500 mt-2 md:w-md md:mx-auto mx-10">
+        Kami menawarkan berbagai kursus kebugaran yang dirancang untuk memenuhi
+        kebutuhan Anda.
+      </p>
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10 md:mx-[140px] mx-5"
+      >
+        <div class="bg-white p-5 rounded-lg transition-shadow duration-300">
+          <img
+            src="./asset/yoga.jpg"
+            alt="Yoga"
+            class="w-full object-cover rounded mb-4 w-full h-[240px]"
+          />
+          <h2 class="text-2xl font-semibold mb-3">Yoga</h2>
+          <p class="text-gray-600 mb-4">
+            Temukan keseimbangan dan ketenangan dengan kelas yoga kami yang
+            dipandu oleh instruktur berpengalaman.
+          </p>
+        </div>
+        <div class="bg-white p-5 rounded-lg transition-shadow duration-300">
+          <img
+            src="./asset/bodybuilding.jpg"
+            alt="bodybuilding"
+            class="w-full object-cover rounded mb-4 w-full h-[240px]"
+          />
+          <h2 class="text-2xl font-semibold mb-3">Body Building</h2>
+          <p class="text-gray-600 mb-4">
+            olahraga yang berfokus pada pengembangan otot melalui latihan angkat
+            beban, diet tinggi protein, dan gaya hidup sehat.
+          </p>
+        </div>
+        <div class="bg-white p-5 rounded-lg transition-shadow duration-300">
+          <img
+            src="./asset/pilates.jpeg"
+            alt="Pilates"
+            class="w-full object-cover rounded mb-4 w-full h-[240px]"
+          />
+          <h2 class="text-2xl font-semibold mb-3">Pilates</h2>
+          <p class="text-gray-600 mb-4">
+            Olahraga yang berfokus pada kekuatan fisik melalui keseimbangan otot
+            dan yang memiliki kualitas gerakan yang seimbang
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-full w-full md:grid md:grid-cols-2 gap-5 relative">
+      <div
+        class="min-h-[70vh] my-10 w-full hidden md:block"
+        style="
+          background-image: url(./asset/bannerGym.png);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        "
+      >
+        <h1
+          class="bg-white absolute top-[100px] md:left-1/2 transform -translate-x-1/2 p-2 text-5xl font-bold italic tracking-wide text-gray-800"
+        >
+          30 YEARS OF EXPERIENCE
+        </h1>
+      </div>
+      <div class="flex items-center mx-10 md:mx-0">
+        <div class="mt-10">
+          <div class="h-[4px] w-[100px] bg-blue-500 rounded mb-5"></div>
+          <h1 class="text-2xl font-semibold">Learn More About Us</h1>
+          <p class="text-gray-500 mt-2 mb-5">
+            Rio Gym adalah tempat terbaik untuk mencapai tujuan kebugaran Anda.
+            Kami menyediakan fasilitas modern, instruktur berpengalaman, dan
+            beragam kelas seperti yoga, pilates, hingga HIIT yang cocok untuk
+            semua level. Dengan suasana yang mendukung dan program yang
+            fleksibel, kami membantu Anda menjadi versi terbaik dari diri Anda.
+            Bergabunglah sekarang dan jadikan hidup lebih sehat bersama Rio Gym!
+          </p>
+          <button class="bg-blue-500 px-4 py-3 rounded-md text-white">
+            Read More
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="min-h-[70vh] my-10 w-full text-white"
+      style="
+        background-image: url(./asset/battleRope.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      "
+    >
+      <div class="py-10">
+        <div class="h-[4px] w-[100px] bg-blue-500 rounded mb-5 mx-auto"></div>
+        <h1 class="text-2xl md:text-4xl text-center font-light">
+          Class Schedules
+        </h1>
+        <div class="grid grid-cols-4 gap-5 mt-10 mx-5 md:mx-[140px]">
+          <div class="border border-white p-5 text-left rounded-md">
+            <h1 class="text-4xl">01.</h1>
+            <h2 class="text-lg font-semibold mt-5">Monday</h2>
+            <ul class="mt-3">
+              <li class="mb-2">Yoga - 8:00 AM</li>
+            </ul>
+          </div>
+          <div class="border border-white p-5 text-left rounded-md">
+            <h1 class="text-4xl">02.</h1>
+            <h2 class="text-lg font-semibold mt-5">Tuesday</h2>
+            <ul class="mt-3">
+              <li class="mb-2">Body Pump - 8:00 AM</li>
+            </ul>
+          </div>
+          <div class="border border-white p-5 text-left rounded-md">
+            <h1 class="text-4xl">03.</h1>
+            <h2 class="text-lg font-semibold mt-5">Wednesday</h2>
+            <ul class="mt-3">
+              <li class="mb-2">Strength - 8:00 AM</li>
+            </ul>
+          </div>
+          <div class="border border-white p-5 text-left rounded-md">
+            <h1 class="text-4xl">04.</h1>
+            <h2 class="text-lg font-semibold mt-5">Thursday</h2>
+            <ul class="mt-3">
+              <li class="mb-2">Pilates - 8:00 AM</li>
+            </ul>
+          </div>
+          <div class="border border-white p-5 text-left rounded-md">
+            <h1 class="text-4xl">05.</h1>
+            <h2 class="text-lg font-semibold mt-5">Friday</h2>
+            <ul class="mt-3">
+              <li class="mb-2">Kickboxing - 8:00 AM</li>
+            </ul>
+          </div>
+          <div class="border border-white p-5 text-left rounded-md">
+            <h1 class="text-4xl">06.</h1>
+            <h2 class="text-lg font-semibold mt-5">Saturday</h2>
+            <ul class="mt-3">
+              <li class="mb-2">Aerobics - 8:00 AM</li>
+            </ul>
+          </div>
+          <div class="border border-white p-5 text-left rounded-md">
+            <h1 class="text-4xl">07.</h1>
+            <h2 class="text-lg font-semibold mt-5">Sunday</h2>
+            <ul class="mt-3">
+              <li class="mb-2">Zumba - 8:00 AM</li>
+            </ul>
+          </div>
+          <div class="border border-white p-5 text-left rounded-md">
+            <h1 class="text-4xl">08.</h1>
+            <h2 class="text-lg font-semibold mt-5">Every Day</h2>
+            <ul class="mt-3">
+              <li class="mb-2">Body Building - 8:00 AM</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer -->
-
     <footer class="bg-white">
       <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
-            <a href="https://flowbite.com/" class="flex items-center">
-              <img
-                src="https://flowbite.com/docs/images/logo.svg"
-                class="h-8 me-3"
-                alt="FlowBite Logo"
-              />
-              <span
-                class="self-center text-2xl font-semibold whitespace-nowrap"
-                >Flowbite</span
-              >
-            </a>
+            <h1 class="italic text-2xl font-bold">Rio GYM</h1>
           </div>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-              <h2
-                class="mb-6 text-sm font-semibold text-gray-900 uppercase"
-              >
+              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">
                 Resources
               </h2>
-              <ul class="text-gray-500  font-medium">
-                <li class="mb-4">
-                  <a href="https://flowbite.com/" class="hover:underline"
-                    >Flowbite</a
-                  >
-                </li>
+              <ul class="text-gray-500 font-medium">
+               
                 <li>
                   <a href="https://tailwindcss.com/" class="hover:underline"
                     >Tailwind CSS</a
@@ -137,12 +317,10 @@
               </ul>
             </div>
             <div>
-              <h2
-                class="mb-6 text-sm font-semibold text-gray-900 uppercase"
-              >
+              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">
                 Follow us
               </h2>
-              <ul class="text-gray-500  font-medium">
+              <ul class="text-gray-500 font-medium">
                 <li class="mb-4">
                   <a
                     href="https://github.com/themesberg/flowbite"
@@ -160,12 +338,10 @@
               </ul>
             </div>
             <div>
-              <h2
-                class="mb-6 text-sm font-semibold text-gray-900 uppercase"
-              >
+              <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">
                 Legal
               </h2>
-              <ul class="text-gray-500  font-medium">
+              <ul class="text-gray-500 font-medium">
                 <li class="mb-4">
                   <a href="#" class="hover:underline">Privacy Policy</a>
                 </li>
@@ -176,20 +352,15 @@
             </div>
           </div>
         </div>
-        <hr
-          class="my-6 border-gray-200 sm:mx-auto lg:my-8"
-        />
+        <hr class="my-6 border-gray-200 sm:mx-auto lg:my-8" />
         <div class="sm:flex sm:items-center sm:justify-between">
-          <span class="text-sm text-gray-500 sm:text-center "
-            >© 2023
-            <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a
+          <span class="text-sm text-gray-500 sm:text-center"
+            >© 2025
+            <a href="" class="hover:underline">Rio Gym</a
             >. All Rights Reserved.
           </span>
           <div class="flex mt-4 sm:justify-center sm:mt-0">
-            <a
-              href="#"
-              class="text-gray-500 hover:text-gray-900 "
-            >
+            <a href="#" class="text-gray-500 hover:text-gray-900">
               <svg
                 class="w-4 h-4"
                 aria-hidden="true"
@@ -205,10 +376,7 @@
               </svg>
               <span class="sr-only">Facebook page</span>
             </a>
-            <a
-              href="#"
-              class="text-gray-500 hover:text-gray-900  ms-5"
-            >
+            <a href="#" class="text-gray-500 hover:text-gray-900 ms-5">
               <svg
                 class="w-4 h-4"
                 aria-hidden="true"
@@ -222,10 +390,7 @@
               </svg>
               <span class="sr-only">Discord community</span>
             </a>
-            <a
-              href="#"
-              class="text-gray-500 hover:text-gray-900  ms-5"
-            >
+            <a href="#" class="text-gray-500 hover:text-gray-900 ms-5">
               <svg
                 class="w-4 h-4"
                 aria-hidden="true"
@@ -241,10 +406,7 @@
               </svg>
               <span class="sr-only">Twitter page</span>
             </a>
-            <a
-              href="#"
-              class="text-gray-500 hover:text-gray-900  ms-5"
-            >
+            <a href="#" class="text-gray-500 hover:text-gray-900 ms-5">
               <svg
                 class="w-4 h-4"
                 aria-hidden="true"
@@ -260,10 +422,7 @@
               </svg>
               <span class="sr-only">GitHub account</span>
             </a>
-            <a
-              href="#"
-              class="text-gray-500 hover:text-gray-900  ms-5"
-            >
+            <a href="#" class="text-gray-500 hover:text-gray-900 ms-5">
               <svg
                 class="w-4 h-4"
                 aria-hidden="true"
@@ -285,9 +444,9 @@
     </footer>
 
     <script>
-     const mobailNav = document.getElementById("mobailNav");
+      const mobailNav = document.getElementById("mobailNav");
 
-     function toggleNav() {
+      function toggleNav() {
         const mobailNav = document.getElementById("mobailNav");
         if (mobailNav.classList.contains("right-[-500px]")) {
           mobailNav.classList.remove("right-[-500px]");
